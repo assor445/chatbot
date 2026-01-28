@@ -77,6 +77,8 @@ export async function POST(req: Request) {
     console.log('Messages count:', truncationResult.truncatedCount)
     console.log('Estimated tokens:', truncationResult.estimatedTokens)
 
+
+
     try {
         // 5. Raw fetch ke OpenRouter
         const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {

@@ -35,7 +35,9 @@ export async function getChats(): Promise<Chat[]> {
         .order('updated_at', { ascending: false })
 
     if (error) {
-        console.error('Error fetching chats:', error)
+        console.error('Error fetching chats:', JSON.stringify(error, null, 2))
+        if ('message' in error) console.error('Error message:', (error as any).message)
+        if ('code' in error) console.error('Error code:', (error as any).code)
         return []
     }
 
