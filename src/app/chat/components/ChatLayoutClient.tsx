@@ -16,7 +16,7 @@ function ChatLayoutInner({ chats, user, children }: ChatLayoutClientProps) {
     const { isSidebarOpen } = useChatContext()
 
     return (
-        <div className="flex h-screen w-screen overflow-hidden bg-[#212121]">
+        <div className="flex h-[100dvh] w-screen overflow-hidden bg-[#212121] overscroll-y-none">
             <ChatSidebar
                 chats={chats}
                 user={user}

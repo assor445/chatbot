@@ -255,10 +255,10 @@ export default function ChatInterface({
     return (
         <div className="flex-1 flex flex-col min-w-0 bg-[#212121] h-full relative overflow-y-auto scrollbar-hide">
             {/* Header - minimal */}
-            <div className="h-12 flex items-center px-3 sticky top-0 z-50 bg-[#212121]">
+            <div className="h-14 flex items-center px-4 sticky top-0 z-50 bg-[#212121]">
                 {!isSidebarOpen && (
-                    <Button variant="ghost" size="icon" onClick={() => setIsSidebarOpen(true)} className="text-gray-400 hover:text-white hover:bg-white/10">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M9 3v18" /></svg>
+                    <Button variant="ghost" size="icon" onClick={() => setIsSidebarOpen(true)} className="text-gray-400 hover:text-white hover:bg-white/10 w-10 h-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><path d="M9 3v18" /></svg>
                     </Button>
                 )}
             </div>
@@ -335,14 +335,14 @@ export default function ChatInterface({
                             style={{ height: '36px' }}
                         />
 
-                        <div className="pb-0.5 pr-0.5 sm:pb-1 sm:pr-1">
+                        <div className="pb-1 pr-1 sm:pb-1 sm:pr-1">
                             <Button
                                 type="submit"
                                 size="icon"
                                 disabled={!inputValue.trim() || isLoading}
-                                className={`rounded-full w-7 h-7 sm:w-8 sm:h-8 transition-all ${inputValue.trim() ? 'bg-white text-black hover:bg-gray-200' : 'bg-[#676767] text-[#212121] cursor-not-allowed'}`}
+                                className={`rounded-full w-10 h-10 sm:w-8 sm:h-8 transition-all ${inputValue.trim() ? 'bg-white text-black hover:bg-gray-200' : 'bg-[#676767] text-[#212121] cursor-not-allowed'}`}
                             >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="sm:w-4 sm:h-4"><path d="M12 19V5" /><path d="m5 12 7-7 7 7" /></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="sm:w-4 sm:h-4"><path d="M12 19V5" /><path d="m5 12 7-7 7 7" /></svg>
                             </Button>
                         </div>
                     </div>
