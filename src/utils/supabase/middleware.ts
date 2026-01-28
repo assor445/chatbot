@@ -37,7 +37,8 @@ export async function updateSession(request: NextRequest) {
     // ATURAN PROTEKSI RUTE (Disini Satpam Bekerja)
 
     // 1. Jika user BELUM login dan mencoba masuk ke halaman /chat...
-    if (!user && request.nextUrl.pathname.startsWith('/chat')) {
+    // 1. Jika user BELUM login dan mencoba masuk ke halaman /chat...
+    if (!user && request.nextUrl.pathname.startsWith('/chat') && request.method === 'GET') {
         // ...tendang ke halaman login
         const url = request.nextUrl.clone()
         url.pathname = '/login'
